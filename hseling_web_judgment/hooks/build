@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "------ HOOK START - BUILD -------"
+# printenv
+# https://docs.docker.com/docker-cloud/builds/advanced/
+docker build --build-arg auth=$AUTH --build-arg branch=$BRANCH --build-arg django_secret_key=$DJANGO_SECRET_KEY -t $IMAGE_NAME .
+
+echo "------ HOOK END - BUILD -------"
