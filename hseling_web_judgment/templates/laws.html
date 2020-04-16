@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+<title>Парсер решений судов</title>
+</head>
+<body>
+<h2>Выберите статью</h2>
+<form action="/" method="get">
+        <select name="law" style="width: 300px;">
+{% for law, name in all_laws.items %}
+	<option value="{{ law }}">{{ name }}</option>
+{% endfor %}
+        </select>
+<input type="submit" value="Открыть" />
+</form>
+</body>
+</html>

@@ -1,0 +1,170 @@
+BODY {
+  background: #ccc;
+  font-family: Verdana, sans-serif;
+  margin: 0; 
+  margin-top: 0px;
+}
+header {
+ display: block; /* Для старых браузеров */
+ height: 300px; /* Высота шапки */ 
+ margin: 0; 
+ margin-top: 0px;
+}
+div.main_body {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+H1 {
+  color: #333;
+  font-size: 200%;
+  font-family: Verdana, sans-serif; 
+}
+H2 {
+  color: #333;
+  font-size: 180%;
+  font-family: Verdana, sans-serif;
+} 
+select {   
+	background: white;
+	padding:5px 15px; 
+	cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+	font-family: Verdana, sans-serif;
+}
+H3 {
+  color: #333;
+  font-size: 120%;
+  font-family: Verdana, sans-serif; 
+}
+a:link {
+    color: #4d8489; /* Цвет ссылок */
+   }
+a:visited {
+    color: #b66164; /* Цвет посещенных ссылок */
+   } 
+form {
+    margin: 0 auto;
+	color: #333;
+    max-width: 95%;
+    padding: 10px 10px 6px 10px;
+	background: 85A7AA; 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    overflow: hidden; 
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 10px; 
+} 
+P {
+  padding-left: 20px;
+  font-family: Verdana, sans-serif; 
+  color: #333;
+  line-height: 0.9;
+} 
+p, ul, li { 
+  font-family: Verdana, sans-serif; 
+  color: #333;
+  line-height: 1.2;
+} 
+input{
+    padding:5px 15px; 
+	color: #333;
+    background: #white;  
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+	font-family: Verdana, sans-serif;
+}  
+input[type=submit]{
+    padding:5px 15px; 
+	color: white;
+    background: #346365;  
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+	font-family: Verdana, sans-serif;
+} 
+button {
+    padding:5px 15px; 
+    background: #346365;
+	color: white;	
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+	font-family: Verdana, sans-serif;
+} 
+a, a:visited, button { 
+	color: #555; 
+	text-decoration: underline; 
+	outline: 0;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition:all 1s ease;
+}
+
+
+/* #Buttons (default color: grey)
+================================================== */
+
+a.button,
+a.button:visited,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */ 
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.09) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.09))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.09) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.09) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.09) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.09) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#17000000',GradientType=0 ); /* IE6-8 */
+	background-color: #fff;
+	color: #444;
+	text-shadow: 1px 1px rgba(255, 255, 255, 1);
+	border: 1px solid #eee;
+	border-top: 1px solid #ccc;
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3),
+					 0px 0px 5px 0px rgba(255, 255, 255, 0.7) inset;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3),
+					    0px 0px 5px 0px rgba(255, 255, 255, 0.7) inset;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3),
+				0px 0px 5px 0px rgba(255, 255, 255, 0.7) inset;
+				
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 100%; 
+	text-decoration: none;
+	cursor: pointer;
+	padding: 4px 12px; 
+	font-family: Verdana, sans-serif;
+}
+ 
+a.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+	background-color: #ddd;
+	border: 1px solid #999;
+	border-bottom: 1px solid #888;
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3),
+					 0px 1px 10px -3px #000 inset;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3), 
+						0px 1px 10px -3px #000 inset;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3),
+				0px 1px 10px -3px #000 inset;
+	text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+} 

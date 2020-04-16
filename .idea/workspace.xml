@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b55109c0-2549-46fb-b9b5-cd0c0a59824c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/hseling_api_judgment/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/boilerplate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/default_settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/static/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hseling_api_judgment/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_api_judgment/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/metadata_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_lib_judgment/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/hseling_web_judgment/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/deps/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/db/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/db/hooks/build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/db/postgres-setup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/db/prepare_django_db.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/db/start_postgres.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/db/stop_postgres.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/deps/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/deps/build_deps.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/deps/copy_deps.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/deps/search_wheels.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/log/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/log/syslog-ng.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/metrics/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/metrics/consoles/django.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/metrics/django.rules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/metrics/django.rules.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/metrics/prometheus.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/server/nginx.conf.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/server/nginxlog.conf.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/server/stack-fix.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/server/start_server.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/server/uwsgi.ini.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/server/uwsgilog.ini.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/docker/system-test/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/environment.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/hooks/build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hseling_web_judgment/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/healthcheck/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/pytest.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/start_dev_server.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/templatesite/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/templatesite/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/templatesite/test/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/templatesite/test/test_template.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/templatesite/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/templatesite/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/fixtures/tweet.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/static/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/static/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/static/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/templates/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/src/web/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/system-test/healthcheck/test_healthcheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/system-test/pytest.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/system-test/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hseling_web_judgment/vendor/README.md" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>process</find>
+      <find>manage.py</find>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/process.py" />
+        <option value="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/main.py" />
+        <option value="$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/boilerplate.py" />
+        <option value="$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/classifier.py" />
+        <option value="$PROJECT_DIR$/hseling_web_judgment/src/manage.py" />
+        <option value="$PROJECT_DIR$/hseling_api_judgment/app.py" />
+        <option value="$PROJECT_DIR$/hseling_web_judgment/web/views.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/hseling-repo-judgment.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hseling-repo-judgment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hseling-repo-judgment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hseling-repo-judgment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hseling-repo-judgment" type="462c0819:PsiDirectoryNode" />
+              <item name="hseling_api_judgment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hseling-repo-judgment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hseling-repo-judgment" type="462c0819:PsiDirectoryNode" />
+              <item name="hseling_lib_judgment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hseling-repo-judgment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hseling-repo-judgment" type="462c0819:PsiDirectoryNode" />
+              <item name="hseling_lib_judgment" type="462c0819:PsiDirectoryNode" />
+              <item name="hseling_lib_judgment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hseling-repo-judgment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hseling-repo-judgment" type="462c0819:PsiDirectoryNode" />
+              <item name="hseling_web_judgment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hseling-repo-judgment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hseling-repo-judgment" type="462c0819:PsiDirectoryNode" />
+              <item name="hseling_web_judgment" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hseling-repo-judgment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="hseling-repo-judgment" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Study/judgement/fish_repo/hseling-repo-judgment" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="hseling-repo-judgment" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/Study/judgement/fish_repo/hseling-repo-judgment" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hseling_api_judgment" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hseling_lib_judgment" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b55109c0-2549-46fb-b9b5-cd0c0a59824c" name="Default Changelist" comment="" />
+      <created>1585415543172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585415543172</updated>
+      <workItem from="1585415544430" duration="1335000" />
+      <workItem from="1586764196713" duration="3056000" />
+      <workItem from="1586774998310" duration="172000" />
+      <workItem from="1586813107294" duration="12000" />
+      <workItem from="1587054051917" duration="341000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4916000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/docker-compose.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/main.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/setup.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="83" lean-forward="true" selection-start-line="13" selection-start-column="83" selection-end-line="13" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/tests/test_hseling_api_judgment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_lib_judgment/setup.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/static/styles.css" />
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_lib_judgment/tests/test_hseling_api_judgment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/boilerplate.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/deps/README.md" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/environment.env" />
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/default_settings.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/manage.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/docker/server/stack-fix.c" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/web/models.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/web/apps.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/web/admin.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/web/views.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/web/urls.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/web/tests.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/hseling_api_judgment/main.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/templatesite/wsgi.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/templatesite/urls.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/templatesite/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/src/templatesite/settings.py" />
+    <entry file="file://$PROJECT_DIR$/hseling_web_judgment/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/metadata_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding>
+            <element signature="e#196#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_lib_judgment/hseling_lib_judgment/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#227#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hseling_api_judgment/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
