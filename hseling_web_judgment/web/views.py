@@ -45,7 +45,7 @@ def search(req: HttpRequest):
     if page_num > 4:
         pages = [pages[0], ('...', None)] + pages[page_num-3:]
 
-    download_link = f'http://localhost:3000/documents/download?' + urlencode(params)
+    download_link = f'{front}/documents/download?' + urlencode(params)
 
     return render(req, 'search.html', {'regions': regions, 'selected_region': selected_region, 'judge': judge,
                                        'year': year, 'article': article, 'documents': documents, 'pages': pages,
@@ -78,7 +78,7 @@ def doc(req: HttpRequest, doc_id: int):
 
     parsed_data = data["parsed"]
     pars = {rus_title: parsed_data[title] for title, rus_title in parts_titles if title in parsed_data}
-    download_link = f'http://localhost:3000/documents/{doc_id}/download'
+    download_link = f'{front}/documents/{doc_id}/download'
 
     return render(
         req,

@@ -6,8 +6,8 @@ import tempfile
 import pandas as pd
 from flask import Flask, jsonify, abort, request, send_file
 
-from hseling_lib_judgment.metadata_extractor import get_metadict
-from hseling_lib_judgment.classifier import get_parts
+from lib.metadata_extractor import get_metadict
+from lib.classifier import get_parts
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False

@@ -37,7 +37,7 @@ def split_sentences(html):
     return ru_sent_tokenize(main_part)
 
 
-def predict_parts(text, clf_filename='./hseling_lib_judgment/models/finalized_parts_clf.sav'):
+def predict_parts(text, clf_filename='./lib/models/finalized_parts_clf.sav'):
     """предсказываем метки частей для каждого предложения из основной части документа"""
     clf = pickle.load(open(clf_filename, 'rb'))
     return clf.predict(text)
