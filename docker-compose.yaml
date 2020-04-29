@@ -10,8 +10,12 @@ services:
     ports:
       - 5000:80
   front:
-    build:
-      context: .
-      dockerfile: hseling_web_judgment/Dockerfile
-    ports:
-      - 8000:80
+      env_file: hseling_web_judgment/environment.env
+      build:
+        context: .
+        dockerfile: hseling_web_judgment/Dockerfile
+        args:
+          - django_secret_key=igl+d2j%bp=mebuk7dd-6y84fh*#h4pgf*nkx#zv#=ucvl8hhe
+      ports:
+        - 8000:80
+

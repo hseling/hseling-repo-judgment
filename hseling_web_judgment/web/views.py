@@ -3,9 +3,9 @@ from urllib.parse import urlencode
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 import requests
+import os
 
-front = "http://back:3000"
-# front = 'http://localhost:3000'
+HSELING_API_ROOT = os.environ['HSELING_API_ROOT']
 
 
 def update_page_num(params: dict, page_num: int):
@@ -16,7 +16,7 @@ def update_page_num(params: dict, page_num: int):
 
 # @csrf_exempt
 def search(req: HttpRequest):
-    regions = requests.get(f'{front}/regions/').json()
+    regions = requests.get(f'{HSELING_API_ROOT}/regions/').json()
 
 
     selected_region = req.GET.get('region') or '%'
@@ -33,7 +33,7 @@ def search(req: HttpRequest):
         'page_num': page_num
     }
 
-    data = requests.get(f'{front}/documents/', params=params).json()
+    data = requests.get(f'{HSELING_API_ROOT}/documents/', params=params).json()
     documents = data['documents']
 
     page_num = data['page_num']
@@ -45,7 +45,7 @@ def search(req: HttpRequest):
     if page_num > 4:
         pages = [pages[0], ('...', None)] + pages[page_num-3:]
 
-    download_link = f'{front}/documents/download?' + urlencode(params)
+    download_link = f'{HSELING_API_ROOT}/documents/download?' + urlencode(params)
 
     return render(req, 'search.html', {'regions': regions, 'selected_region': selected_region, 'judge': judge,
                                        'year': year, 'article': article, 'documents': documents, 'pages': pages,
@@ -53,7 +53,7 @@ def search(req: HttpRequest):
 
 
 def doc(req: HttpRequest, doc_id: int):
-    data = requests.get(f'{front}/documents/{doc_id}').json()
+    data = requests.get(f'{HSELING_API_ROOT}/documents/{doc_id}').json()
     metadata_titles = [
         ["article", 'статья'],
         ["region", 'регион'],
@@ -78,7 +78,7 @@ def doc(req: HttpRequest, doc_id: int):
 
     parsed_data = data["parsed"]
     pars = {rus_title: parsed_data[title] for title, rus_title in parts_titles if title in parsed_data}
-    download_link = f'{front}/documents/{doc_id}/download'
+    download_link = f'{HSELING_API_ROOT}/documents/{doc_id}/download'
 
     return render(
         req,

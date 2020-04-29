@@ -1,4 +1,6 @@
 FROM python:3.7
+ARG django_secret_key
+ENV DJANGO_SECRET_KEY $django_secret_key
 WORKDIR /app
 COPY . .
 RUN pip install -r hseling_web_judgment/requirements.txt
