@@ -1,119 +1,21 @@
-version: '3.4'
-
-x-common-variables: &common-variables
- CELERY_BROKER_URL: redis://redis:6379
- CELERY_RESULT_BACKEND: redis://redis:6379
- MINIO_ACCESS_KEY: minio
- MINIO_SECRET_KEY: minio123
- MINIO_URL: minio:9000
- MINIO_BUCKET_NAME: hse-api-bucket
- MYSQL_HOST: mysql
- MYSQL_ROOT_PASSWORD: mysql123
- MYSQL_USER: mysql
- MYSQL_PASSWORD: mysql123
- MYSQL_DATABASE: hse-api-database
- RESTRICTED_MODE: 0
+version: "3.7"
 
 services:
- hse-api-web:
-  build:
-   context: .
-   dockerfile: hseling_api_judgment/Dockerfile
-  ports:
-   - "5000:80"
-  volumes:
-   - ./hseling_api_judgment/hseling_api_judgment:/app/hseling_api_judgment
-  links:
-   - minio
-   - mysql
-   - redis
-   - hse-api-celery
-  environment: *common-variables
+  back:
+    build:
+      context: .
+      dockerfile: hseling_api_judgment/Dockerfile
+    volumes:
+      - ./sudact_database/sudact.sqlite:/app/sudact.sqlite
+    ports:
+      - 5000:80
+  front:
+      env_file: hseling_web_judgment/environment.env
+      build:
+        context: .
+        dockerfile: hseling_web_judgment/Dockerfile
+        args:
+          - django_secret_key=igl+d2j%bp=mebuk7dd-6y84fh*#h4pgf*nkx#zv#=ucvl8hhe
+      ports:
+        - 8000:80
 
- hse-api-celery:
-  build:
-   context: .
-   dockerfile: hseling_api_judgment/Dockerfile
-  command: celery -A main.celery worker
-  volumes:
-   - ./hseling_api_judgment/hseling_api_judgment:/app/hseling_api_judgment
-  links:
-   - minio
-   - mysql
-   - redis
-  environment: *common-variables
-
- minio:
-  image: minio/minio:latest
-  volumes:
-   - data:/data
-  ports:
-   - "9000:9000"
-  command: server /data/minio
-  environment: *common-variables
-
-
- mysql:
-  image: mysql
-  command: --default-authentication-plugin=mysql_native_password
-  restart: always
-  environment: *common-variables
-
-
- redis:
-  image: redis:latest
-
- # Development related
- db:
-  env_file: hseling_web_judgment/environment.env
-  build:
-   context: ./hseling_web_judgment/
-   dockerfile: ./docker/db/Dockerfile
-   args:
-    # These values should be in sync with environment.env
-    # for development. If you change them, you'll 
-    # need to rebuild the container
-    - POSTGRES_DB=templatesitedb
-    - POSTGRES_USER=postgres
-    - POSTGRES_PASSWORD=somepassword
-    - POSTGRES_PORT=5432
-    # Remember to keep this consistent
-    - django_secret_key=secret_key!
-
- log:
-  env_file: hseling_web_judgment/environment.env
-  build:
-   context: ./hseling_web_judgment/
-   dockerfile: ./docker/log/Dockerfile
-
- build-deps:
-  env_file: hseling_web_judgment/environment.env
-  build:
-   context: ./hseling_web_judgment/
-   dockerfile: ./docker/deps/Dockerfile
-  volumes:
-   - ./hseling_web_judgment/vendor:/opt/ext_vendor
-  command: /opt/copy_deps.sh
-
- dev-server:
-  env_file: hseling_web_judgment/environment.env
-  environment:
-   - CONSOLE_LOGS=1
-  build: 
-   context: ./hseling_web_judgment/
-   args:
-    # Remember to keep this consistent
-    - django_secret_key=secret_key!
-  command: ./start_dev_server.sh
-  ports:
-   - "8000:80"
-  volumes:
-   - ./hseling_web_judgment/src:/opt/code
-  depends_on:
-   - db
-   - log
-   - hse-api-web
-   - hse-api-celery
-
-volumes:
-  data:

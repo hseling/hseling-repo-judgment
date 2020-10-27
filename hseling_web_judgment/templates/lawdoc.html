@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+<title>Парсер решений судов</title>
+</head>
+<body>
+<div class="main_body" style = "margin-top: 20 px">
+<h2>{{ header }}</h2>
+
+<h3> Метаданные </h3>
+{% for key, entity in meta.items %}
+    <p>
+    <b><i>{{ key }}</b></i> : {{ entity }}
+    </p>
+{% endfor %}
+
+<h3> Текст приговора </h3>
+{% for name, text in pars.items %}
+    <b><i>{{ name }}:</b></i>
+    {% if text.get_type == list %}
+        <ul>
+            {% for item in text %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {{ text }}
+    {% endif %}
+{% endfor %}
+<p>Ссылка на полный текст приговора: <a href="{{ url }}">{{ url }}</a></p>
+
+<button onclick="window.location.href = '{{ download_link }}';">Скачать документ</button>
+</div>
+</body>
+</html>

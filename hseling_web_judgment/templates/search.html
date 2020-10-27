@@ -1,0 +1,111 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+<script src="{% static 'js/w3_functions.js' %}"></script>
+<title>Парсер решений судов</title>
+</head>
+<body>
+<div class="main_body">
+<h2 style = "margin-top: 20px">Поиск документов</h2>
+<form action="/search" method="get" style="margin-left: 0px;"> 
+    Судья: <input type="text" name="judge" value="{{judge}}" />
+    Год: <select name="year"> 
+  <option disabled selected>Выберите год</option>
+  <option>2018</option>
+  <option>2019</option> 
+</select>
+    Статья: <input type="text" name="article" value="{{article}}" />
+    Регион: <select name="region">
+            <option value=""></option>
+{% for name in regions %}
+	<option value="{{ name }}"
+            {% if name == selected_region %}selected="selected"{% endif %}
+    >{{ name }}</option>
+{% endfor %}
+        </select>
+<input type="submit" value="Искать" /> 
+</form>
+
+{% if documents %} 
+    <p>
+        <script>
+            function toggle(show, className){
+            [].forEach.call(document.getElementsByClassName(className), (item) => {item.style.display = show?'table-cell':'none'});
+            };
+        </script>
+		<div style="margin-left: 0px;">
+		<input type="checkbox" onclick="toggle(this.checked, 'fabula')"> Фабула &nbsp; &nbsp;
+        <input type="checkbox" onclick="toggle(this.checked, 'witness')"> Показания свидетелей  &nbsp; &nbsp;
+        <input type="checkbox" onclick="toggle(this.checked, 'prove')"> Доказательства  &nbsp; &nbsp;
+        <input type="checkbox" onclick="toggle(this.checked, 'meditation')"> Размышления судьи  &nbsp; &nbsp;
+		<button onclick="window.location.href = '{{ download_link }}';">Скачать найденные документы</button>
+		</div>
+    </p>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        {% for num, url in pages %}
+            <span style="margin: 3px;">
+                {% if url %}
+                    <a href="{{url}}">{{num}}</a>
+                {% else %}
+                    {{num}}
+                {% endif %}
+            </span>
+        {% endfor %}
+    </div>
+    <table border="1" id="myTable">
+        <thead>
+            <tr>
+                <th>Документ</th>
+                <th style="display: none;" class="fabula">Фабула</th>
+                <th style="display: none;" class="witness">Показания свидетелей</th>
+                <th style="display: none;" class="prove">Доказательства</th>
+                <th style="display: none;" class="meditation">Размышления судьи</th>
+                <th>Регион</th>
+                <th>Суд</th>
+                <th>Дело</th>
+				<th>Судья</th> 
+                <th>Обвиняемый</th>
+                <th>Дата</th> 
+                <th>Статьи</th>
+                <th>Ссылка</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in documents %}
+                <tr class="item">
+                    <td><a href="/doc{{ item.id }}">{{item.header}}</a></td>
+                    <td style="display: none;" class="fabula">{{item.fabula}}</td>
+                    <td style="display: none;" class="witness">{{item.witness}}</td>
+                    <td style="display: none;" class="prove">{{item.prove}}</td>
+                    <td style="display: none;" class="meditation">{{item.meditation}}</td>
+                    <td>{{item.region}}</td>
+                    <td>{{item.court}}</td>
+                    <td>{{item.number}}</td>
+                    <td>{{item.judge}}</td>
+                    <td>{{item.accused}}</td>
+                    <td>{{item.date}}</td>
+                    <td>{{item.article}}</td>
+                    <td><a href="{{item.url}}">{{item.url}}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+        {% for num, url in pages %}
+            <span style="margin: 3px;">
+                {% if url %}
+                    <a href="{{url}}">{{num}}</a>
+                {% else %}
+                    {{num}}
+                {% endif %}
+            </span>
+        {% endfor %}
+    </div>
+{% else %}
+    <div>Ничего не найдено</div>
+{% endif %}
+</div>
+</body>
+</html>

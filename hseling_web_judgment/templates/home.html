@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+<link rel="image" href="{% static 'css/img/header_judge.jpg' %}"/>
+<title>Парсер решений судов</title>
+</head>
+<body>
+<header style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url('{% static 'css/img/header_judge.jpg' %}') no-repeat; background-size: 100%; margin: 0px; text-align: center; vertical-align: middle">
+	<div style ="display: inline-block; margin: 100px 0"> 
+		<h2 style = "text-align: center; color: white; font-size: 400%; margin: 0; font-family: Trebuchet MS, Helvetica, sans-serif">Парсер судебных решений</h2>  
+		<h4 style = "text-align: center; color: white; font-size: 150%; margin: 0; font-family: Trebuchet MS, Helvetica, sans-serif">автоматическое извлечение данных из уголовных приговоров</h4>   
+	</div>
+</header>
+<div class="main_body" style="margin-bottom: 40px">
+<p style ="font-size: 120%"> 
+<br>Наши алгоритмы анализируют тексты уголовных приговоров и представляют их в структурированном виде. </br>
+<br>А именно:</br>
+  <ul  style ="font-size: 120%">
+   <li>извлекают метаданные:
+    <ul>
+     <li>суд и регион</li>
+     <li>дату решения</li>
+	 <li>номер дела</li>
+	 <li>имя судьи</li>
+	 <li>имя обвиняемого</li>
+	 <li>статьи, по которым проходит данное дело</li>
+    </ul>
+   </li>
+   
+   <li>делят на смысловые части: 
+    <ul>
+     <li>фабула</li>
+     <li>показания свидетелей </li>
+	 <li>описание доказательств</li>
+	 <li>размышления судьи</li>
+    </ul>
+   </li>
+  </ul>
+<p  style ="font-size: 120%">
+Наш поисковый движок позволяет производить поиск по базе по заданным фильтрам: 
+<ul  style ="font-size: 120%"> 
+     <li>по региону</li>
+	 <li>по году</li>
+	 <li>по статье уголовного кодекса</li>
+</ul>
+</p> 
+<form action="/search" style="padding: 0px; margin: 0; margin-left: 20px">
+    <button type="submit" style="font-size: 120%">Перейти к поиску документов </button>
+</form>  
+<p style="white-space: pre; font-size: 120%">Также вы cможете скачать обработанные документы (или один документ) в формате excel.
+Чтобы обработать свой документ в формате html, воспользуйтесь кодом и инструкцией по <a href="https://github.com/HSEJUDGMENT/judgement">ссылке</a>.
+</p><p style="white-space: pre; font-size: 120%">База составлена из документов, представленных на сайте <a href="https://sudact.ru/">Судебные и нормативные акты РФ</a>, всего на нашем сайте <b>21,5 тыс. дел</b> за 2018-2019 гг.
+Проект разработан студентами магистратуры ВШЭ “Компьютерная лингвистика” в 2019-2020 гг. Исходный код доступен по <a href="https://github.com/HSEJUDGMENT/judgement">ссылке</a>. 
+Подробнее об алгоритме можно прочитать в <a href="https://github.com/HSEJUDGMENT/judgement/blob/master/paper.pdf">статье</a>.
+Исследование было представлено на постерной сессии конференции <a href="https://ainlconf.ru/2019/program">AINL 2019</a>. 
+</p>
+</div>
+</body>
+</html>
